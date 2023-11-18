@@ -20,14 +20,14 @@ This challenge requires state merging to solve in a reasonable time. With this m
 ## ais3_crackme 
 
 ```
-$ radius2 -p ais3_crackme -s flag 184 -A. flag -X wrong
+$ radius2 -p ais3_crackme -s flag 184 -X wrong
 
   flag : "ais3{I_tak3_g00d_n0t3s}"
 
 ```
 ## google2016_unbreakable_1
 ```
-$ radius2 -zp unbreakable -s flag 408 -A. flag -c flag 'CTF{' -B 'Thank you'   
+$ radius2 -zp unbreakable -s flag 408 -c flag 'CTF{' -B 'Thank you'   
 
   flag : "CTF{0The1Quick2Brown3Fox4Jumped5Over6The7Lazy8Fox9}"
 
@@ -87,5 +87,13 @@ $ r2 -qc '/ad mov dword [rbp - 4], 0~[0]' babyrev > avoids
 $ radius2 -zp babyrev -s flag 336 -A. flag -X INCORRECT -x `cat avoids`
 
   flag : "GLUG{C01nc1d3nc3_c4n_b3_fr3aky_T6LSERDYB6}"
+
+```
+
+## ida 
+```
+$ radius2 -p chal -s flag 192 -c flag '[ -~]' -b 0x1610  
+
+  flag : "Fr33_M4dam3-De/M4inten0n"
 
 ```
