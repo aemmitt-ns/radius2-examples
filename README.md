@@ -97,3 +97,17 @@ $ radius2 -p chal -s flag 192 -c flag '[ -~]' -b 0x1610
   flag : "Fr33_M4dam3-De/M4inten0n"
 
 ```
+
+## vmwhere2
+```
+$ radius2 -p chal -A. program -s stdin 368 -c stdin '[ -~]' -1m 0x16a1
+
+  stdin : "uiuctf{b4s3_3_Xs_b4s3d_just_l1kZ_vm_r3v3rs1n@}"
+
+=====================================stdout=====================================
+Welcome to VMWhere 2!
+Please enter the password:
+Correct!
+
+================================================================================
+```
