@@ -84,7 +84,7 @@ $ radius2 -zp babymix -s stdin 176 -X Incorrect
 ## foobarctf_2022
 ```
 $ r2 -qc '/ad mov dword [rbp - 4], 0~[0]' babyrev > avoids 
-$ radius2 -zp babyrev -s flag 336 -A. flag -X INCORRECT -x `cat avoids`
+$ radius2 -zp babyrev -s flag 336 -X INCORRECT -x `cat avoids`
 
   flag : "GLUG{C01nc1d3nc3_c4n_b3_fr3aky_T6LSERDYB6}"
 
@@ -110,4 +110,13 @@ Please enter the password:
 Correct!
 
 ================================================================================
+```
+The solution here looks a bit different from the intended one (`uiuctf{b4s3_3_1s_b4s3d_just_l1k3_vm_r3v3rs1ng}`) but is still valid because the solution is actually a bit underconstrained. 
+
+## CodeGateCTF2023 gatecodegate
+```
+$ radius2 -Np main -s stdin 256 -B Correct -C eax 0
+
+  stdin : "4nD&0r&s|~|l,5hr_4rE_fxxk!ng_g0d"
+
 ```
