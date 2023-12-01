@@ -53,7 +53,7 @@ $ radius2 -p crackme -s flag 320 -A. flag -X Wrong -B Correct
 ```
 ## ollvm
 ```bash
-$ for hash in `tail -n1 README`; do radius2 -p ollvm -s hex 128 -A. hex -C1 "Output: $hash"; done  
+$ for hash in `tail -n1 README`; do radius2 -p ollvm -s hex 128 -C1 "Output: $hash"; done  
 
   hex : "6d6972726F725f6d"
 
