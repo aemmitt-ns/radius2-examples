@@ -116,3 +116,11 @@ $ radius2 -Np main -s stdin 256 -B Correct -C eax 0
   stdin : "4nD&0r&s|~|l,5hr_4rE_fxxk!ng_g0d"
 
 ```
+
+## ecw2023_moth
+```bash
+$ radius2 -zp moth -s flag 648 -X Nope -m 0x137f  
+
+  flag : "bcaedbabaadbcacdcdbcadbebabdebecaceccadadedabdbebcbcedcacaedababebdbcedcacacedaba"
+  
+```
