@@ -1,6 +1,8 @@
 # radius2-examples
 Examples of using the radius2 CLI tool to solve reversing challenges
 
+install `radare2` from git then run `cargo install radius2` to get `radius2`
+
 ## defcamp_r100 
 ```bash
 $ radius2 -p r100 -s stdin 96 -X Incorrect
@@ -96,9 +98,9 @@ $ radius2 -p chal -s flag 192 -c flag '[ -~]' -b 0x1610
 ```
 ## vmwhere2
 ```bash
-$ radius2 -p chal -A. program -s stdin 368 -c stdin '[ -~]' -1m 0x16a1
+$ radius2 -p chal -A. program -s stdin 368 -c stdin '[a-z0-9_{}]' -1m 0x16a1
 
-  stdin : "uiuctf{b4s3_3_Xs_b4s3d_just_l1kZ_vm_r3v3rs1n@}"
+  stdin : "uiuctf{b4s3_3_1s_b4s3d_just_l1k3_vm_r3v3rs1ng}"
 
 =====================================stdout=====================================
 Welcome to VMWhere 2!
@@ -107,7 +109,6 @@ Correct!
 
 ================================================================================
 ```
-The solution here looks a bit different from the intended one (`uiuctf{b4s3_3_1s_b4s3d_just_l1k3_vm_r3v3rs1ng}`) but is still valid because the solution is actually a bit underconstrained. 
 
 ## gatecodegate
 ```bash
@@ -122,5 +123,5 @@ $ radius2 -Np main -s stdin 256 -B Correct -C eax 0
 $ radius2 -zp moth -s flag 648 -X Nope -m 0x137f  
 
   flag : "bcaedbabaadbcacdcdbcadbebabdebecaceccadadedabdbebcbcedcacaedababebdbcedcacacedaba"
-  
+
 ```
