@@ -203,3 +203,13 @@ $ radius2 -MNzp sakura -b SHA256 -s stdin 3200 -c stdin '[0-9]'
 Explanation:
 - `-M` is an experimental feature that merges states on every jump target
 - `-b SHA256` sets a breakpoint at the address of the PLT entry for `SHA256`
+
+## greyctf_crackme3
+```bash
+$ radius2 -Mp crackme3 -s stdin 192 -H putchar 87,A0,-,_ 
+
+  stdin : "grey{r_y0u_d1zzy?_9bfad}"
+
+```
+Explanation:
+- `-H putchar 87,A0,-,_` hooks putchar and asserts the first argument A0 != 'W' so that "Wrong" will not appear in the output 
