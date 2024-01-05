@@ -202,3 +202,4 @@ $ radius2 -MNzp sakura -b SHA256 -s stdin 3200 -c stdin '[0-9]'
 ```
 Explanation:
 - `-M` is an experimental feature that merges states on every jump target
+- `-b SHA256` sets a breakpoint at the address of the PLT entry for `SHA256`
