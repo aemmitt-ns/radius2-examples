@@ -213,3 +213,23 @@ $ radius2 -Mp crackme3 -s stdin 192 -H putchar 87,A0,-,_
 ```
 Explanation:
 - `-H putchar 87,A0,-,_` hooks putchar and asserts the first argument A0 != 'W' so that "Wrong" will not appear in the output 
+
+## picoctf2024
+
+```bash 
+$ radius2 -p crackme100 -s stdin 400 -c stdin '[a-z_]' -zX FAIL
+
+  stdin : "lumsopgxaocglvijjikbpwhfvchdmeipbotdjhxmwzilkvguun"
+
+```
+Explanation:
+- Weirdly even though it is not used the _ in the allowed chars solves the challenge 3x faster
+
+## angstromctf
+
+```bash 
+$ radius2 -p autorev_assemble -s stdin 1600 -B SOLVED 
+
+  stdin : "Blockchain big data solutions now with added machine learning. Enjoy! I sincerely hope you actf{wr0t3_4_pr0gr4m_t0_h3lp_y0u_w1th_th1s_df93171eb49e21a3a436e186bc68a5b2d8ed} instead of doing it by hand."
+
+```
