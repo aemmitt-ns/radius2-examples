@@ -162,6 +162,7 @@ Explanation:
 - `-N` signals that the code is not self-modifying which can result in faster execution
 - `-C eax 0` constrains the register `eax` to be `0` after execution finishes
 
+(currently this solution is broken and `-B Correct` must be replaced with `-b 0xb21d5c`)
 ## ecw2023_moth
 ```bash
 $ radius2 -1zp moth -s flag 648 -X Nope -m 0x137f 
@@ -233,3 +234,22 @@ $ radius2 -p autorev_assemble -s stdin 1600 -B SOLVED
   stdin : "Blockchain big data solutions now with added machine learning. Enjoy! I sincerely hope you actf{wr0t3_4_pr0gr4m_t0_h3lp_y0u_w1th_th1s_df93171eb49e21a3a436e186bc68a5b2d8ed} instead of doing it by hand."
 
 ```
+
+## alpacahack
+
+```bash
+$ radius2 -zp masking-tape -s flag 224 -X wrong -m 0x12a7
+
+  flag : "Alpaca{y0u'r3_a_pr0_crack3r}"
+```
+
+```bash
+$ radius2 -zp hidden -s flag 840 -X wrong -m 0x1272
+
+  flag : "Alpaca{th15_f145_1s_3xc3ssiv3ly_l3ngthy_but_th1s_1s_t0_3nsur3_th4t_1t_c4nn0t_b3_e4s1ly_s01v3d_us1ng_angr}"
+
+```
+
+Explanation: 
+- Often using `-z` with mergepoints does not work well, but in this case it solves the challenge 3x faster 
+- `angr` could potentially still solve this challenge depending on whether veritesting/manual mergepoints are working again
